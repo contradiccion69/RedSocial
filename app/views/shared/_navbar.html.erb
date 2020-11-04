@@ -1,5 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-danger">
+  <a class="navbar-brand" href="#">
+    <img src="https://northcentralus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Funilibrebog-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!q1HKdvy6Fkm2V074tzSsZWpfRowJGcpDuUPnpCvMsKpdukMGZpokSrFqDT4IBO6U%2Fitems%2F01TVEQ7ONJTCAMQGYOURG3FBYOUF57I2LD%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdW5pbGlicmVib2ctbXkuc2hhcmVwb2ludC5jb21ANmNhMzRhZTEtNDY2Zi00NGJjLWE3YWEtMGFjNWE3OGM2MWIxIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTYwNDUwMjAwMCIsImV4cCI6IjE2MDQ1MjM2MDAiLCJlbmRwb2ludHVybCI6IkpmWUs3VTMyUDAybGJ5bUNzWG1UTnI1SThOd0oxNit4Rys0RzUvZzA0a0U9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMjEiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJOelpqWVRVeFlXSXRZbUZtWXkwME9URTJMV0kyTlRjdE5HVm1PR0kzTXpSaFl6WTEiLCJuYW1laWQiOiIwIy5mfG1lbWJlcnNoaXB8anVhbm4taGVybmFuZGV6Y0B1bmlsaWJyZS5lZHUuY28iLCJuaWkiOiJtaWNyb3NvZnQuc2hhcmVwb2ludCIsImlzdXNlciI6InRydWUiLCJjYWNoZWtleSI6IjBoLmZ8bWVtYmVyc2hpcHwxMDAzYmZmZDllMGFjNzUxQGxpdmUuY29tIiwidHQiOiIwIiwidXNlUGVyc2lzdGVudENvb2tpZSI6IjIifQ.R0lDTjd3VlE3dFNaS2t4T0FHT1ExUEY3MHdob202RGsrbHE5c0pkT3Zqdz0&encodeFailures=1&srcWidth=&srcHeight=&width=763&height=274&action=Access" width="30" height="30" alt="" loading="lazy">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,7 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <% if user_signed_in? %>
         <li class="nav-item">
@@ -21,7 +23,6 @@
           <%= link_to 'Iniciar sesion', new_user_session_path, class: 'nav-link' %>
         </li>
         <%end %>
-
     </ul>
   </div>
 </nav>
