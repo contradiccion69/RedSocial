@@ -1,28 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-danger">
-  <a class="navbar-brand" href="/">
-    <img src="https://northcentralus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Funilibrebog-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!q1HKdvy6Fkm2V074tzSsZWpfRowJGcpDuUPnpCvMsKpdukMGZpokSrFqDT4IBO6U%2Fitems%2F01TVEQ7ONUZWUPWAU6BVHLJYOVSRKMVMOG%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdW5pbGlicmVib2ctbXkuc2hhcmVwb2ludC5jb21ANmNhMzRhZTEtNDY2Zi00NGJjLWE3YWEtMGFjNWE3OGM2MWIxIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTYwNDUxMjc5OSIsImV4cCI6IjE2MDQ1MzQzOTkiLCJlbmRwb2ludHVybCI6IkpmWUs3VTMyUDAybGJ5bUNzWG1UTnI1SThOd0oxNit4Rys0RzUvZzA0a0U9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMjEiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJOelpqWVRVeFlXSXRZbUZtWXkwME9URTJMV0kyTlRjdE5HVm1PR0kzTXpSaFl6WTEiLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfGp1YW5uLWhlcm5hbmRlemNAdW5pbGlicmUuZWR1LmNvIiwibmlpIjoibWljcm9zb2Z0LnNoYXJlcG9pbnQiLCJpc3VzZXIiOiJ0cnVlIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MTAwM2JmZmQ5ZTBhYzc1MUBsaXZlLmNvbSIsInR0IjoiMCIsInVzZVBlcnNpc3RlbnRDb29raWUiOiIzIn0.eEt0eCtBd0U2WXkwRHNkQUNJckpOY2lrRjZWRlR0UVBTN25YSnNpZC9GZz0&encodeFailures=1&srcWidth=&srcHeight=&width=951&height=342&action=Access" width="200" height="60" alt="" loading="lazy">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+ <nav class="navbar navbar-expand-lg navbar-light bg-danger ">
+    <a class="navbar-brand" href="/">
+      <img src="<%= asset_path 'socialred.png'%>" width="220" height="70" alt="" loading="lazy">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <% if user_signed_in? %>
-        <li class="nav-item ">
-          <%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item" >
+          <a class="nav-link text-light" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
+        <% if user_signed_in? %>
+          <li class="nav-item ">
+            <%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete, class: 'nav-link text-light' %>
+          </li>
         <% else %>
-        <li class="nav-item">
-          <%= link_to 'Registrarse', new_user_registration_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Iniciar sesion', new_user_session_path, class: 'nav-link' %>
-        </li>
+          <li class="nav-item">
+            <%= link_to 'Registrarse', new_user_registration_path, class: 'nav-link text-light' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Iniciar sesion', new_user_session_path, class: 'nav-link text-light' %>
+          </li>
         <%end %>
-    </ul>
-  </div>
-</nav>
+      </ul>
+    </div>
+  </nav>
