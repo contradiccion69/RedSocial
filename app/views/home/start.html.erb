@@ -4,6 +4,7 @@
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -65,3 +66,20 @@
     <% end %>
   </div>
 </div>
+<br/><br/>
+<!-- Footer -->
+<footer class="page-footer font-small bg-danger pt-4">
+  <div class="container">
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1 text-light">Registrate Gratis</h5>
+      </li>
+      <li class="list-inline-item">
+        <%= link_to 'Registrarse  ', new_user_registration_path, class: 'btn btn-dark btn-rounded' %>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-copyright text-center py-3 text-light border-top">
+    <span>© 2020 Copyright: Juan Nicolas Hernandez Chavez</span>
+  </div>
+</footer>
