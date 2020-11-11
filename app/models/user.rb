@@ -6,6 +6,7 @@ class User < ApplicationRecord
   #Validations
   validates :name, presence: true,length: {in: 5..20}
   validates :lastName, presence: true, length: {in: 5..20}
-  validates :email, uniqueness: true, length: {in: 5..20}
-
+  validates :email, uniqueness: true, length: {in: 5..50}
+  # Publications
+  has_many :posts
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   # Routing with Devise
   devise_for :users
     # when the user within authenticate
