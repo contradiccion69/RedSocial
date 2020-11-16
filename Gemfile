@@ -22,7 +22,11 @@ gem 'devise'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'best_in_place', '3.0.1'
+gem 'best_in_place', '~> 3.1', '>= 3.1.1'
+
+gem 'coffee-rails'
+
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
