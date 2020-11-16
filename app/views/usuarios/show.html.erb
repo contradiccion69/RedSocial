@@ -3,7 +3,7 @@
   <section class="container border border-danger mt-3 shadow p-3 bg-white rounded">
     <div class=" border-bottom border-danger">
 
-      <%= @user.name %> 
+      <%= @user.name %>
       <%= @user.lastName %>
     </div>
 
@@ -11,13 +11,12 @@
     Seguidores
     <%= @user.posts.count %>
     Posts
-
     </div>
-
-
-
-      <!--Boton de agregar amigo-->
-
-
-
     </section>
+    <%= form_for @user do |f| %>
+      <%= f.text_field :name  %>
+      <%= f.text_field :lastName  %>
+      <%= f.submit "Enviar" %>
+
+
+    <% end %>

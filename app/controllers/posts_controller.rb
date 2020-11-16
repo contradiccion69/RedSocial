@@ -28,13 +28,13 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.json { render :show, status: :created, location: @post }
+
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
-
+        format.json { render :show, status: :created, location: @post }
       else
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-        format.html { render :new }
 
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -44,13 +44,13 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.json { render :show, status: :ok, location: @post }
+
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-
+        format.json { render :show, status: :ok, location: @post }
       else
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-        format.html { render :edit }
 
+        format.html { render :edit }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -60,9 +60,9 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.json { head :no_content }
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
 
+      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
