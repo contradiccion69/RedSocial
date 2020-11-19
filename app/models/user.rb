@@ -9,4 +9,6 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, length: {in: 5..50}
   # Publications
   has_many :posts
+  has_attached_file :avatar, styles: {}
+  has_attached_file :cover
 end
