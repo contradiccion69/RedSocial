@@ -1,8 +1,10 @@
-
-    <!--cover usuario-->
-  <section class="container border border-danger mt-3 shadow p-3 bg-white rounded">
+ <br/>
+  <section class="container shadow p-3 bg-white rounded">
     <div class=" border-bottom border-danger">
-
+      <div class="cover">
+        <div class="cover">
+          <%= image_tag @user.cover.url(:thumb), class: 'container'%>
+        </div>
       <%= @user.name %>
       <%= @user.lastName %>
     </div>
@@ -17,8 +19,10 @@
       <%= f.text_field :name  %>
       <%= f.text_field :lastName  %>
       <%= f.submit "Enviar" %>
-
-
-
     <% end %>
 
+<style>
+  .cover{
+      background: url("#{@user.cover.url (:medium)}");
+  }
+</style>
