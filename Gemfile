@@ -28,6 +28,7 @@ gem 'coffee-rails'
 
 gem 'jquery-rails'
 
+
 gem 'paperclip'
 
 group :development, :test do

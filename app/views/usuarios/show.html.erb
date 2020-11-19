@@ -1,9 +1,11 @@
  <br/>
   <section class="container shadow p-3 bg-white rounded">
+    <%= link_to 'Editar perfil', edit_user_registration_path, class: 'btn btn-dark' %>
     <div class=" border-bottom border-danger">
       <div class="cover">
+        <%= image_tag @user.avatar.url(), class: 'container'%>
         <div class="cover">
-          <%= image_tag @user.cover.url(:thumb), class: 'container'%>
+          <%= image_tag @user.cover.url(), class: 'container'%>
         </div>
       <%= @user.name %>
       <%= @user.lastName %>
@@ -14,15 +16,9 @@
     <%= @user.posts.count %>
     Posts
     </div>
-    </section>
-    <%= form_for @user do |f| %>
-      <%= f.text_field :name  %>
-      <%= f.text_field :lastName  %>
-      <%= f.submit "Enviar" %>
-    <% end %>
+   </div>
 
-<style>
-  .cover{
-      background: url("#{@user.cover.url (:medium)}");
-  }
-</style>
+
+  </section>
+
+

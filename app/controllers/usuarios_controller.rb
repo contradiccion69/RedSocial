@@ -23,7 +23,7 @@ class UsuariosController < ApplicationController
     @user = User.find(params[:id])
   end
   def user_params
-    params.require(:user).permit(:username,:email,:name,:lastName)
+    params.require(:user).permit(:username,:email,:name,:lastName,:avatar,:cover)
 
   end
 end

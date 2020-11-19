@@ -1,16 +1,30 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
-<section class="container border border-danger mt-3 shadow p-3 bg-white rounded">
+<section class="container shadow p-3 bg-white rounded">
+
   <div class=" border-bottom border-danger">
+    <div class="cover">
+      <%= image_tag @user.avatar.url(), class: 'container'%>
+      <div class="cover">
+        <%= image_tag @user.cover.url(), class: 'container'%>
+      </div>
+      <%= @user.name %>
+      <%= @user.lastName %>
+    </div>
 
-    <%= @user.name %>
-    <%= @user.lastName %>
+    <div class="row">
+      Seguidores
+      <%= @user.posts.count %>
+      Posts
+    </div>
+
+    <%= form_for @user do |f| %>
+      <%= f.file_field :avatar %>
+      <%= f.file_field :cover %>
+      <%= f.submit :Enviar %>
+    <% end %>
+
   </div>
 
-  <div class="row">
-    Seguidores
-    <%= @user.posts.count %>
-    Posts
-  </div>
 </section>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
