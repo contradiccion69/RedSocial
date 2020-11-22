@@ -3,12 +3,15 @@
 
   <div class=" border-bottom border-danger">
     <div class="cover">
-      <%= image_tag @user.avatar.url(), class: 'container'%>
       <div class="cover">
-        <%= image_tag @user.cover.url(), class: 'container'%>
+        <%= image_tag @user.avatar.url(), class: 'container img-thumbnail'%>
+        <%= image_tag @user.cover.url(), class: 'container img-thumbnail'%>
       </div>
+
+      <div>
       <%= @user.name %>
       <%= @user.lastName %>
+      </div>
     </div>
 
     <div class="row">

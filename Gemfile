@@ -22,14 +22,21 @@ gem 'devise'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'best_in_place', '~> 3.1', '>= 3.1.1'
-
 gem 'coffee-rails'
 
 gem 'jquery-rails'
 
+gem 'remotipart', '~> 1.4', '>= 1.4.4'
+
 
 gem 'paperclip'
+
+gem 'aasm'
+
+gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+
+gem 'will_paginate'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

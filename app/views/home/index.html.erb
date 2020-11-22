@@ -3,6 +3,9 @@
     <div class="col-md-12">
         <%= render 'posts/form'%>
         <div id="posts" >
+          <%= render @posts %>
+
+          <%= will_paginate @posts %>
 
         </div>
     </div>
