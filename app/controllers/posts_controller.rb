@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to :show }
+        format.html { render 'home/index', notice: 'Creado Con exito' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }

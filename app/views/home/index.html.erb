@@ -3,10 +3,13 @@
     <div class="col-md-12">
         <%= render 'posts/form'%>
         <div id="posts" >
-          <%= render @posts %>
-
-          <%= will_paginate @posts %>
-
+          <% @posts.each do |post| %>
+            <article>
+              <%= post.body %>
+              <%= post.user_id %>
+            </article>
+          <% end %>
         </div>
     </div>
 </div>
+<%= will_paginate @posts %>

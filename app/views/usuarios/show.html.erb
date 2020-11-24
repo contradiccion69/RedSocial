@@ -1,24 +1,21 @@
- <br/>
-  <section class="container shadow p-3 bg-white rounded">
-    <%= link_to 'Editar perfil', edit_user_registration_path, class: 'btn btn-dark' %>
-    <div class=" border-bottom border-danger">
-      <div class="cover">
-        <%= image_tag @user.avatar.url(), class: 'container'%>
-        <div class="cover">
-          <%= image_tag @user.cover.url(), class: 'container'%>
+ <div class="container shadow-lg col-md-6 mt-4" style="padding: 0">
+    <div class="position-relative col-md-12" style="padding: 0">
+      <%= image_tag @user.cover.url(), class: 'w-100', style: 'height:200px'%>
+      <div class="position-absolute col-md-12" style="top: 0; padding: 0;">
+        <div class="row" style="margin: 0">
+          <div class="col-md-2" style="padding: 0">
+            <%= image_tag @user.avatar.url(), class: 'float-left rounded-circle mt-5 ml-5 border border-dark', style: "width:105px; height:100px;"%>
+          </div>
+          <div class="col-md-8" style="padding: 0">
+            <h1 class="text-white" style="margin-top: 11%; margin-left: 5%">
+              <%= @user.name%>
+              <%= @user.lastName%>
+            </h1>
+          </div>
+          <div class="col-md-2" style="padding: 0">
+            <%= link_to 'Editar perfil', edit_user_registration_path, class: 'btn btn-dark mt-2  ml-5 text-white'%>
+          </div>
         </div>
-      <%= @user.name %>
-      <%= @user.lastName %>
+      </div>
     </div>
-
-    <div class="row">
-    Seguidores
-    <%= @user.posts.count %>
-    Posts
-    </div>
-   </div>
-
-
-  </section>
-
-
+ </div>
