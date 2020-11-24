@@ -18,4 +18,49 @@
         </div>
       </div>
     </div>
+   <div class="col-md-12 mt-4 mb-4">
+     <%= render 'posts/form'%>
+   </div>
+   <br/>
+   <% @posts.each do |post| %>
+     <% if @user.id == post.user_id  %>
+   <div class="container border border-danger rounded col-md-11 p-3 mt-2">
+     <div class="row">
+       <div class="col-md-1">
+         <%= image_tag @user.avatar.url(), class: ' rounded-circle border border-dark', style: "width:50px; height:50px;"%>
+       </div>
+       <div class="col-md-10 mt-2">
+         <h5>
+           <%= @user.name%>
+           <%= @user.lastName%>
+         </h5>
+       </div>
+       <div class="col-md-1">
+         <div class="dropdown">
+           <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+             <%= link_to 'Eliminar Publicación', post, method: :delete, data: { confirm: 'Estas seguro de eliminar tu publicación'}, class: "dropdown-item"%>
+             <%= link_to 'Editar Publicación', edit_post_path(post), class: "dropdown-item"%>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-12 mt-4">
+       <%= post.body %>
+     </div>
+   </div>
+     <%end %>
+   <% end %>
+   <br/>
+   <br/>
+   <script>
+       recargar = document.getElementById("recargar");
+       recargar.addEventListener('click', ()=>{
+           window.location.reload();
+       })
+   </script>
  </div>
+
+
+
+
