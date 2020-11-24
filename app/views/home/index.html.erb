@@ -2,14 +2,27 @@
 <div class="container">
     <div class="col-md-12">
         <%= render 'posts/form'%>
-        <div id="posts" >
-          <% @posts.each do |post| %>
-            <article>
-              <%= post.body %>
-              <%= post.user_id %>
-            </article>
-          <% end %>
-        </div>
     </div>
+  <% @posts.each do |post| %>
+      <div class="container border border-danger rounded col-md-11 p-3 mt-2">
+        <div class="row">
+          <div class="col-md-1">
+
+          </div>
+          <div class="col-md-11 mt-2">
+            <h5>
+              <%= post.user_id %>
+            </h5>
+          </div>
+        </div>
+        <div class="col-md-12 mt-4">
+          <%= post.body %>
+        </div>
+      </div>
+  <%end %>
+    <script>
+        recargar = document.getElementById("recargar");
+        recargar.addEventListener('click', ()=>{window.location.reload();
+        })
+    </script>
 </div>
-<%= will_paginate @posts %>

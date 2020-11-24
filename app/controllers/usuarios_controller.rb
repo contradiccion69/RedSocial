@@ -1,7 +1,6 @@
 class UsuariosController < ApplicationController
   before_action :set_user
   before_action :authenticate_user!, only: [:update]
-
   def show
     @post = Post.new
     @posts = Post.all
